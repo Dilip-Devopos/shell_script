@@ -1,0 +1,35 @@
+Automated to craete the vm using aws services.
+- 
+Aws cli download.
+create access the key console.  account -> security credentials->craete-credentials.
+Aws cloudformation template using aws console. console->cft
+
+- todo :
+install aws cli 
+create the instance
+
+Linux:
+
+- operating system:
+
+act bridge for application and hardware.
+opensource
+secure
+Distributions versions
+fast
+
+- Arch:
+
+compailers,user process,systemsoftwaers 
+system lib -> gnu, libc
+kernal -> establish connection bewt hardware and software -> device, memory, process managements and handling system calls.
+hardware -> i/o
+
+- fundamental od shell scripting :
+
+shell -> way to interact with operating system.
+
+set -x debug mode -> shell script best practice
+ commands :
+    cd .., man, ls, ls -ltr, touch, df -h, free -h, nproc, chmod, ps -ef | grep, rm -rf, awk -F " " '{print $2}', curl , wget, fsudo find/ -name nameof the file , if and for loops, trap.
+
