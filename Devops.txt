@@ -1,35 +1,36 @@
-Automated to craete the vm using aws services.
-- 
-Aws cli download.
-create access the key console.  account -> security credentials->craete-credentials.
-Aws cloudformation template using aws console. console->cft
+Fundamental of shell scripting :
 
-- todo :
-install aws cli 
-create the instance
+What is shell ?
 
-Linux:
+  shell is common to any program languages to interact with operating system.
+  bash is wiedly used to interact with Unix/linux operating system.
 
-- operating system:
+shell script best practice:
 
-act bridge for application and hardware.
-opensource
-secure
-Distributions versions
-fast
+   #!/bin/bash  : To intcative the action inside the shell scrip.
+   #!/bin/sh    : To intcative the action inside the shell scrip but sh indirectly trigger the bash command & mostly all are use the bash command because some of the linux Distributions use dash shell. if you are using thesh this trigger indirectly bash but those linux distribution bash is not there soour shell commands are not excute.
+   set -x       : Run shell script in Debug mode.
+   set -e       : Run shell script in error track mode or when running the shell script if any error occurs the script will not excute the remainimg the shell commands.
+   set -o pipelinefail : Shell script pipeline command fails or error occur shell script stop the exceutions.  
 
-- Arch:
+commands :
 
-compailers,user process,systemsoftwaers 
-system lib -> gnu, libc
-kernal -> establish connection bewt hardware and software -> device, memory, process managements and handling system calls.
-hardware -> i/o
+    cd ..   : Go Back to the previous directory.
+    ls      : List the files in the directory.
+    ls -ltr : List the files in the directory with additional information like(file permissions , user and group of the directory , files created datetime).
+    touch   : to create the files.
+    df -h   : Disk free -h for human readable format.
+    free -h : Free space.
+    nproc   : number of cpus in the linux machine.
+    chmod   : Change the file permission using this command with numbers  777 is the full permission of the files and directory , 4 2 1 , 4 read, 2 write, 1 Excute.
+    rm -rf  : To remove the files and directory.
+    curl    : To get the result for the request.
+    wget    : To download the files from internet or browser.  
+    trap    : If any actios performing the terminal inbetween ant action happen to ignore or who doing this action signals to track .
+    (ps -ef | grep) : Find the process that are running in the background & grep used to find the words in the result.
+    (ps -ef | grep amazon| awk -F " " '{print $2}') : Filter the specific colums in the result.
+    (sudo find / -name nameof the file) : Find the file in the whole machine. 
+    if and for loops : To take the descition based on the inputs & for to itterative the counts.
+     
 
-- fundamental od shell scripting :
-
-shell -> way to interact with operating system.
-
-set -x debug mode -> shell script best practice
- commands :
-    cd .., man, ls, ls -ltr, touch, df -h, free -h, nproc, chmod, ps -ef | grep, rm -rf, awk -F " " '{print $2}', curl , wget, fsudo find/ -name nameof the file , if and for loops, trap.
 
