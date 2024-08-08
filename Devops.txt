@@ -32,5 +32,38 @@ commands :
     (sudo find / -name nameof the file) : Find the file in the whole machine. 
     if and for loops : To take the descition based on the inputs & for to itterative the counts.
      
+Interview Questions for shell Scripting :
 
+   i.   List some of the commonly used shell commands ?
+          Ans : ls, vi, vim, cd, touch, mkdir, grep, rm -rf, free -h, du -h, df -h, top, ps -ef.
+   ii.  Write a simple shell script to list all processes ?    
+          Ans : ps ef | awk -F " " '{print $2}'
+   iii. Write a script to print only erros from a remote log ?
+          Ans : curl google.com | grep error.
+   vi.   Write a shell script to print numbers divided by 3 & 2 and not 15 ?
+          Ans :    #!/bin/bash
+                     set -e
+                     for i in {1..100}; do
+                     if [ $(expr $i % 3) -eq 0 ] || [ $(expr $i % 5) -eq 0 ] && [ $(expr $i % 15) -ne 0 ];
+                     then
+                          echo $i
+                     fi
+                     done
+   v.    Write a script to print number of S in mississippi ?
+          Ans : a=dilip
+               grep -o "i" <<<"$a" | wc -l.
+   vi.    howwill you debug the shell script ?
+           Ans : set -x.
+   vii.   What is crontab in linux ? can you provide an example of usage ?
+           Ans :  if i want to send the cpu and memroy usage of the node machine at every day 6 pm use crontab.Linux will automatically excute the process.
+   viii.   What is the diff between soft and hard link ?
+           Ans : i.  use hard link to take a backup of the file in memory if the actual file was deleted the copy of the file is exist.     
+                 ii. soft link is used to alias of the file reference for example python3 as python , if the python or python3 any one is deleted the actual file content also deleted , because both actual file name and alias name point to the same memoty reference.
+    ix.    How will you manage logs of a system that generate hugelog files everyday ?
+            Ans : logrotate 
 
+Realtime shell script project in cloud infracture.
+
+    i.   manageability servers
+    ii.  count
+    iii.                           
